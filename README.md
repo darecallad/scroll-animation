@@ -1,4 +1,4 @@
-# Scroll Animation Showcase
+# Scroll Animation
 
 ## Description
 
