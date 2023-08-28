@@ -6,7 +6,7 @@ The Scroll Animation Showcase project is a hands-on exploration of captivating s
 
 ## Features
 
-- **Introduction:** Discover the magic of scroll animations and their impact on modern web design.
+- **Introduction:** Discover the magic of scroll animations and their impact on modern web design. [https://logical.so/]
 
 - **Fading Animations:** Implement smooth fading in of images, text, and elements as users scroll down the page.
 
@@ -40,4 +40,3 @@ This project draws inspiration from the trend of scroll animations in modern web
 [Chung An Chen]
 
 ---
-
