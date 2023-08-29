@@ -23,7 +23,6 @@ The Scroll Animation Showcase project is a hands-on exploration of captivating s
 1. Clone this repository to your local machine.
 2. Open the `index.html` file in a web browser to view the Scroll Animation Showcase.
 3. Scroll down to experience the animations in action.
-4. Use the provided menu to navigate to different sections.
 
 ## Technologies Used
 
