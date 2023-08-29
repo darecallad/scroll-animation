@@ -28,15 +28,17 @@ h1 {
 .top-section {
   display: flex;
   text-align: start;
-  padding: 0;
+  position: sticky;
+  top: 0;
+  transform: translate(0, calc(-1% * (max(var(--scroll), 25) - 25) * 100 / 75));
+  --background-opacity: calc(100% - 1% * min(var(--scroll), 30) * 100 / 30);
 }
 
 .top-section .left,
 .top-section .right {
   flex-basis: 0;
   flex-grow: 1;
-  padding: 1rem;
-  padding-left: 3rem;
+  padding: 1rem 1rem 1rem 3rem;
 }
 
 .top-section .left {
@@ -56,6 +58,32 @@ h1 {
   --value: min(var(--scroll), 30) * 50 / 30;
   width: calc(50vw + 1vw * var(--value));
   transform: translateY(calc(50% - 1% * var(--value)));
+}
+
+/* Scroll effects */
+:root {
+  --scroll: 0;
+}
+
+/* Image transitions */
+.imgs > * {
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+  z-index: 10;
+  transform: translate(0, 100%);
+  transition: transform 250ms ease-in-out;
+}
+
+/* Show images */
+.imgs > .show {
+  transform: translate(0, 0);
+}
+
+/* Data attribute for image to show */
+[data-img-to-show] {
+  position: absolute;
+  top: 20%;
 }
 
 /* Media queries */
@@ -79,37 +107,4 @@ h1 {
   .imgs > .top-section-img {
     width: 100vw;
   }
-}
-
-/* Scroll effects */
-:root {
-  --scroll: 0;
-}
-
-.top-section {
-  position: sticky;
-  top: 0;
-  transform: translate(0, calc(-1% * (max(var(--scroll), 25) - 25) * 100 / 75));
-  --background-opacity: calc(100% - 1% * min(var(--scroll), 30) * 100 / 30);
-}
-
-/* Image transitions */
-.imgs > * {
-  position: fixed;
-  width: 100vw;
-  bottom: 0;
-  z-index: 10;
-  transform: translate(0, 100%);
-  transition: transform 250ms ease-in-out;
-}
-
-/* Show images */
-.imgs > .show {
-  transform: translate(0, 0);
-}
-
-/* Data attribute for image to show */
-[data-img-to-show] {
-  position: absolute;
-  top: 20%;
 }

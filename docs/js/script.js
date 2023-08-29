@@ -13,8 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   }
 
-  setScrollVar();
-
   const observer = new IntersectionObserver((entries) => {
     for (let i = entries.length - 1; i >= 0; i--) {
       const entry = entries[i];
